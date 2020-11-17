@@ -5,6 +5,7 @@ print(4/2)
 # =>2.0 python会把除法结果转换为浮点数
 print(2**10)
 # =>1024 python中幂是**表示的
+# **的优先级高于-等基础运算
 print('C:\some\name')
 # \n会被转义成换行且\s会产生警告:invalid escape sequence
 print(r'C:\some\name')
