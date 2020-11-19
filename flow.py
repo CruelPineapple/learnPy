@@ -33,3 +33,18 @@ for w in words:
     print(w, len(w))
 
 # 这不就是java的增强for循环吗,js好像也有类似的
+
+for i in range(5, 10):
+    print(i)
+
+# range函数创建一个数字序列, 范围从第一个参数开始, 到第二个参数结束
+# 也可以只传入结束参数,这时候从0开始, 还可以指定步长
+for i in range(0,10,3):
+    print(i)
+
+# 步长和起止点也能是负的
+print(range(10))
+# 输出range(0, 10)
+# 但是如下操作可以成功迭代
+print(sum(range(10))) # 0+1+...+9
+# 这叫做可迭代对象
