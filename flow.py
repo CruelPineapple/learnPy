@@ -39,12 +39,25 @@ for i in range(5, 10):
 
 # range函数创建一个数字序列, 范围从第一个参数开始, 到第二个参数结束
 # 也可以只传入结束参数,这时候从0开始, 还可以指定步长
-for i in range(0,10,3):
+for i in range(0, 10, 3):
     print(i)
 
 # 步长和起止点也能是负的
 print(range(10))
 # 输出range(0, 10)
 # 但是如下操作可以成功迭代
-print(sum(range(10))) # 0+1+...+9
+print(sum(range(10)))  # 0+1+...+9
 # 这叫做可迭代对象
+
+# 循环中的else
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            break
+    else:
+        print(n, 'is a prime number')
+
+# 这里, else属于for循环, 不属于if
+# 因此, 运行顺序是在for循环迭代结束后再运行else部分,且break后跳过else
+# 另, //表示除法后向下取整
