@@ -64,4 +64,19 @@ for n in range(2, 10):
 
 # pass 当语法上需要语句但是逻辑上啥都不干, 使用pass
 
-# def 定义一个函数的句法
+# def 定义一个函数的句法,函数的开头需要两个空行
+
+
+def ask_ok(prompt, retries=4, reminder='Please try again!'):
+    while True:
+        ok = input(prompt)
+        if ok in ('y', 'ye', 'yes'):
+            return True
+        if ok in ('n', 'no', 'nop', 'nope'):
+            return False
+        retries = retries - 1
+        if retries < 0:
+            raise ValueError('invalid user response')
+        print(reminder)
+
+# in 关键字, 检测一个序列是否包含某个值
