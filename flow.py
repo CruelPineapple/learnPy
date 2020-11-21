@@ -80,3 +80,16 @@ def ask_ok(prompt, retries=4, reminder='Please try again!'):
         print(reminder)
 
 # in 关键字, 检测一个序列是否包含某个值
+
+
+# 如果指定了参数的默认值,那么其值会在函数声明处计算
+i = 5
+
+
+def f(arg=i):
+    print(arg)
+
+
+i = 6
+f()
+# 他妈的,函数和类的声明首尾都需要两个空行,指定默认参数的时候=两边不应有空格
