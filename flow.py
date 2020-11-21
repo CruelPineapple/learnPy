@@ -107,4 +107,12 @@ print(g(3))
 # [1]
 # [1, 2]
 # [1, 2, 3]
-# 存在警告!
+# 存在警告!如果不需要共享默认参数,则
+def h(a, l=None):
+    if l is None:
+        l = []
+    l.append(a)
+    return l
+
+
+pass
