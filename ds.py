@@ -11,3 +11,23 @@
 # copy(), 返回列表的浅拷贝
 # 列表做栈使用十分方便, 但是做队列性能会比较差因为在开头操作需要移动所有元素
 
+# 列表推导式
+# squares = []
+# for x in range(10):
+#     squares.append(x**2)
+# 等效于:(下为列表推导式)
+squares = [x**2 for x in range(10)]
+print(squares)
+# 列表推导式包含:
+# 一个表达式, 后面跟一个for, 然后是一个或多个for或if:
+test = [(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y]
+print(test)
+# 上例把两个列表中不同的元素结合起来
+# 如果用正常的for语句写回比较麻烦:
+test1 = []
+for x in [1, 2, 3]:
+    for y in [3, 1, 4]:
+        if x != y:
+            test1.append((x,y))
+
+print(test1)
