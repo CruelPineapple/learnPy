@@ -31,3 +31,8 @@ for x in [1, 2, 3]:
             test1.append((x,y))
 
 print(test1)
+
+del test1
+# del用于删除某个元素, 某个切片, 或整个列表甚至这个变量
+
+# 元组
