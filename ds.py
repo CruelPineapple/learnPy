@@ -45,4 +45,12 @@ print(t[2])
 x, y, z = t
 print(x, y, z)
 
-# 集合
+# 集合, 不重复元素组成的无序集
+basket = {'apple', 'orange', 'apple', 'banana'}
+# 用花括号创建非空集合, 重复元素会被自动移除
+print(basket)
+print('apple' in basket)
+# 用set()创建集合
+a = set('abcdefgabc')
+print(a)
+
