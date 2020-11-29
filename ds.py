@@ -77,3 +77,22 @@ myDict = {x: x**2 for x in (2, 4, 6)}
 print(myDict)
 # 字典推导式创建字典
 
+# 字典循环:
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+for k, v in knights.items():
+    print(k, v)
+
+# 用items()方法可以将关键字和对应的值全部取出
+
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i, v)
+
+# 用enumerate()函数将索引位置和其对应的值同时取出
+
+questions = ['name', 'quest', 'favourite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+
+for q, a in zip(questions, answers):
+    print('What is your {0}? It is {1}.'.format(q, a))
+
+# 同时在两个或更多序列中循环时, 用zip()函数将其内元素一一匹配
