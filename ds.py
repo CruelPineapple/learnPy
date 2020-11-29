@@ -28,7 +28,7 @@ test1 = []
 for x in [1, 2, 3]:
     for y in [3, 1, 4]:
         if x != y:
-            test1.append((x,y))
+            test1.append((x, y))
 
 print(test1)
 
@@ -54,3 +54,17 @@ print('apple' in basket)
 a = set('abcdefgabc')
 print(a)
 
+# 字典, 以关键字(任意不可变类型,如字符串或数字)为索引
+# 可以将字典看作键值对的集合, 在一个字典中, 键必须是唯一的
+tel = {'jack': 123, 'sape': 456}
+# 花括号创建字典, 用逗号隔开键值对们
+tel['tim'] = 789
+# 像这样添加元素
+print(tel)
+print((tel['tim']))
+# 访问字典或字典元素
+list(tel)
+print((list(tel)))
+# 这将返回包含字典中所有键的列表, 按插入次序
+print('tim' in tel)
+# 检查是否存在键
