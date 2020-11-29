@@ -68,3 +68,12 @@ print((list(tel)))
 # 这将返回包含字典中所有键的列表, 按插入次序
 print('tim' in tel)
 # 检查是否存在键
+
+myDict = dict([('a', 1), ('b', 2), ('c', 3)])
+print(myDict)
+# dict()函数直接从键值对创建字典
+
+myDict = {x: x**2 for x in (2, 4, 6)}
+print(myDict)
+# 字典推导式创建字典
+
