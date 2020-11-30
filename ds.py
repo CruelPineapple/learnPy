@@ -96,3 +96,9 @@ for q, a in zip(questions, answers):
     print('What is your {0}? It is {1}.'.format(q, a))
 
 # 同时在两个或更多序列中循环时, 用zip()函数将其内元素一一匹配
+
+# 对序列使用set()将去除重复元素!!
+basket2 = ['apple', 'orange', 'apple', 'pear', 'orange']
+for f in sorted(set(basket2)):
+    print(f)
+
