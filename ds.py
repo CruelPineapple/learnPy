@@ -102,3 +102,5 @@ basket2 = ['apple', 'orange', 'apple', 'pear', 'orange']
 for f in sorted(set(basket2)):
     print(f)
 
+# 关于在python的表达式内赋值, 必须使用海象运算符, 避免了c语言中常见的==写成=的问题
+# 海象运算符 :=
