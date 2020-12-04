@@ -19,3 +19,16 @@ class MyClass2:
 
 y = MyClass2(2)
 print(y.data)
+
+
+# 关于方法对象
+class Hello:
+    def f(self):
+        print('hello')
+
+
+z = Hello()
+hello = z.f
+# 什么都不会发生, 这时候只是让hello引用了这个方法对象
+hello()
+# 打印hello
