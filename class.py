@@ -32,3 +32,9 @@ hello = z.f
 # 什么都不会发生, 这时候只是让hello引用了这个方法对象
 hello()
 # 打印hello
+
+# 定义派生类
+class MyHello(Hello):
+    str = 'myHello'
+
+
