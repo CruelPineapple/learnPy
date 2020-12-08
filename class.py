@@ -38,3 +38,27 @@ class MyHello(Hello):
     str = 'myHello'
 
 
+# 关于类的私有变量, python中没有严格意义的私有类变量
+# 然而重载时, 子类中可以随意使用父类的变量名而不会破坏其内部的调用
+
+class Mapping:
+    def __init__(self, iterable):
+        self.items_list = []
+        self.__update(iterable)
+
+    def update(self, iterable):
+        for item in iterable:
+            self.items_list.append(item)
+
+    __update = update   # private copy of original update() method
+
+class MappingSubclass(Mapping):
+
+    def update(self, keys, values):
+        # provides new signature for update()
+        # but does not break __init__()
+        for item in zip(keys, values):
+            self.items_list.append(item)
+
+# 上面的示例即使在 MappingSubclass 引入了一个 __update 标识符的情况下也不会出错，
+# 因为它会在 Mapping 类中被替换为 _Mapping__update 而在 MappingSubclass 类中被替换为 _MappingSubclass__update。
